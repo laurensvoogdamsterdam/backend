@@ -13,10 +13,6 @@ repos:
       - id: debug-statements
       - id: detect-private-key
       - id: end-of-file-fixer
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.790
-    hooks:
-      - id: mypy
   - repo: https://github.com/ambv/black
     rev: 20.8b1
     hooks:
@@ -56,5 +52,3 @@ repos:
     hooks:
       - id: python-safety-dependencies-check
         name: Check for vulnerable dependencies
-
-
