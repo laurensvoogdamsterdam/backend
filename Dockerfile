@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.10
 
 
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -15,6 +15,5 @@ RUN poetry install --no-interaction
 # train a model if needed.
 # RUN poetry run backend train
 
-EXPOSE 5000
-# ENTRYPOINT [ "poetry", "run", "meetup", "serve", "--host", "0.0.0.0"]
-CMD ["uvicorn", "app.main:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "80"]
+EXPOSE 5001
+ENTRYPOINT [ "poetry", "run", "backend", "serve", "--host", "0.0.0.0"]
